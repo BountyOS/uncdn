@@ -3,16 +3,17 @@
 import os
 import re
 import sys
-import json
 import argparse
 import ipaddress
 import requests
 
-CIDR_REGEX = r'\b(?:\d{1,3}\.){3}\d{1,3}/\d{1,2}\b'
-IP_REGEX = r'(?:\d{1,3}\.){3}\d{1,3}'
-CIDR_DB_DIR = 'cidr-db'
+SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
+CIDR_DB_DIR = os.path.join(SCRIPT_DIR, 'cidr-db')
 CIDR_URL_FILE = os.path.join(CIDR_DB_DIR, 'cidr-urls.txt')
 LATEST_CIDR_FILE = os.path.join(CIDR_DB_DIR, 'latest-cidrs.txt')
+
+CIDR_REGEX = r'\b(?:\d{1,3}\.){3}\d{1,3}/\d{1,2}\b'
+IP_REGEX = r'(?:\d{1,3}\.){3}\d{1,3}'
 
 
 def download_and_extract_cidrs():
@@ -102,7 +103,6 @@ def main():
     parser.add_argument('--update', action='store_true', help='Download and update latest CIDRs')
     parser.add_argument('-ipl', '--input-ip-list', help='Input file (plain IPs or lines with embedded IPs)')
     parser.add_argument('-o', '--output', help='Output file with lines/IPs not in any CDN CIDR')
-
     args = parser.parse_args()
 
     if args.update:
