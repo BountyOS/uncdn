@@ -3,3 +3,5 @@ https://d7uri8nf7uskq.cloudfront.net/tools/list-cloudfront-ips
 https://api.fastly.com/public-ip-list
 https://gocache.com.br/ips
 https://api.cloudflare.com/client/v4/ips
+https://my.imperva.com/api/integration/v1/ips
+https://cachefly.cachefly.net/ips/rproxy.txt
