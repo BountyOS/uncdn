@@ -1,3 +1,5 @@
+![uncdn banner](https://github.com/user-attachments/assets/36511b5c-487f-4eee-846d-57b2a7d224cc)
+
 # uncdn
 
 **uncdn** is a simple, CLI-based Python tool that filters out IP addresses belonging to known CDN (Content Delivery Network) and WAF (Web Application Firewall) providers. It supports both plain IP lists and mixed outputs (like MassDNS or DNS scan results), and can be extended with custom CIDR lists or public IP feed URLs.
